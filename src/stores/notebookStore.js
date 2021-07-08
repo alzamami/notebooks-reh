@@ -22,6 +22,7 @@ class NotebookStore {
             console.error(error)
         }
     }
+    
 }
 const notebookStore = new NotebookStore();
 notebookStore.featchNotebook();
