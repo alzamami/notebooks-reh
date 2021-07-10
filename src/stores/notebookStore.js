@@ -3,6 +3,7 @@ import { makeAutoObservable } from "mobx";
 
 class NotebookStore {
     notebook = [];
+    loading = true;
     constructor() {
         makeAutoObservable(this)
     }
@@ -10,6 +11,7 @@ class NotebookStore {
         try {
             const response = await axios.get("http://localhost:8000/notebooks");
             this.notebook = response.data;
+            this.loading = false;
         } catch (error) {
             console.error(error)
         }
