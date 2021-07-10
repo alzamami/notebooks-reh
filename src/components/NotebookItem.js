@@ -1,5 +1,4 @@
 import { observer } from "mobx-react"
-import { Link } from "react-router-dom"
 import { BookCover, NotebookStyle, NotePage, NoteSkin, NoteLink } from "../styles";
 const NotebookItem = ({ notebook }) => {
     return (

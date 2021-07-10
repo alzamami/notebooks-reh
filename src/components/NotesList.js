@@ -3,7 +3,7 @@ import { useState } from "react";
 
 import { observer } from "mobx-react";
 import noteStore from "../stores/noteStore";
-import { SearchBar, Sheet, SheetWrap, TeactArea, TitleInput } from "../styles"
+import { SearchBar, Sheet, SheetWrap } from "../styles"
 const NotesList = ({ notes, notebook }) => {
   const [note, setNote] = useState({ name: "", description: "" });
 

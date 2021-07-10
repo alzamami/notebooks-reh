@@ -149,7 +149,7 @@ export const Sheet = styled.div `
   background-repeat: repeat-y;
   font-family: cursive;
   font-size: 20px;
-  min-height: 84vh;
+  min-height: 91.4vh;
   padding-left: 100px;
   width: 680px;
   line-height: 2;

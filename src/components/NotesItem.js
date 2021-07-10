@@ -1,5 +1,4 @@
 import { observer } from "mobx-react";
-import { Sheet } from "../styles";
 
 const NotesItem = (props) => {
   const note = props.note.name;
