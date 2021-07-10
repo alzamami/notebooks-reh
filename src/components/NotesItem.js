@@ -1,4 +1,5 @@
 import { observer } from "mobx-react";
+import { Sheet } from "../styles";
 
 const NotesItem = (props) => {
   const note = props.note.name;
@@ -6,7 +7,6 @@ const NotesItem = (props) => {
   return (
     <div>
       <h3>{note}</h3>
-
       <p>{description}</p>
     </div>
   );

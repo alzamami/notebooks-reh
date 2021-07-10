@@ -2,6 +2,7 @@ import notebookStore from "../stores/notebookStore";
 import NotebookItem from "./NotebookItem";
 import { observer } from "mobx-react";
 import { useState } from "react";
+import { ImageBk, SearchBar } from "../styles";
 
 const NotebookList = () => {
   const [notebook, setNotebook] = useState({ name: "" });
@@ -20,27 +21,30 @@ const NotebookList = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     notebookStore.createNotebook(notebook);
+    
   };
 
   return (
-    <div>
-      <form class="input-group mb-3" onSubmit={handleSubmit}>
+    <ImageBk>
+      <form className="input-group mb-3 p-5" onSubmit={handleSubmit}>
         <input
           type="text"
-          class="form-control"
+          className="form-control"
           onChange={handleChange}
           name="name"
+          placeholder="Type your Notebook ..."
         />
-        <button class="btn btn-outline-secondary" type="submit">
-          Button
+        <button className="btn btn-success" type="submit">
+          ADD
         </button>
       </form>
       <div>
-        <input onChange={(e) => setQuery(e.target.value)} />
+        <SearchBar placeholder="Search Your Notebook ..." onChange={(e) => setQuery(e.target.value)} />
       </div>
-
-      {notebooks}
-    </div>
+      <div className="d-flex flex-wrap p-5">
+        {notebooks}
+      </div>
+    </ImageBk>
   );
 };
 export default observer(NotebookList);

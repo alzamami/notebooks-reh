@@ -26,6 +26,7 @@ class NotebookStore {
         newNotebook
       );
       response.data.notes = [];
+      console.log(response.data)
       this.notebook.push(response.data);
     } catch (error) {
       console.error(error);
