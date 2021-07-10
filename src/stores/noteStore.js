@@ -17,9 +17,7 @@ class NoteStore {
             console.error(error)
         }
     }
-    getNoteById = (noteId) => {
-        this.notes.find((note) => note.id === noteId)
-    }
+    getNoteById = (noteId) => this.notes.find((note) => note.id === noteId)
 }
 const noteStore = new NoteStore();
 noteStore.fetchNotes();
